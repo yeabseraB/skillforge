@@ -1,0 +1,51 @@
+export const skills = [
+  {
+    id: "javascript",
+    name: "JavaScript",
+    category: "Programming",
+    progress: 85,
+    level: "Advanced",
+  },
+  {
+    id: "react",
+    name: "React",
+    category: "Frameworks",
+    progress: 70,
+    level: "Intermediate",
+  },
+  {
+    id: "css",
+    name: "CSS",
+    category: "Programming",
+    progress: 65,
+    level: "Intermediate",
+  },
+  {
+    id: "git",
+    name: "Git",
+    category: "Tools",
+    progress: 80,
+    level: "Advanced",
+  },
+  {
+    id: "typescript",
+    name: "TypeScript",
+    category: "Programming",
+    progress: 20,
+    level: "Beginner",
+  },
+  {
+    id: "testing",
+    name: "Testing",
+    category: "Engineering",
+    progress: 10,
+    level: "Beginner",
+  },
+  {
+    id: "accessibility",
+    name: "Accessibility",
+    category: "Engineering",
+    progress: 35,
+    level: "Beginner",
+  },
+];

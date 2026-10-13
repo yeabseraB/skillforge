@@ -1,0 +1,277 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align:center;
+}
+.skills-page {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.skills-content {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: var(--space-2xl) 0;
+}
+
+.skills-header {
+  margin-bottom: var(--space-xl);
+}
+
+.skills-header h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.skills-header p {
+  color: var(--text-secondary);
+}
+
+.skills-search {
+  margin-bottom: var(--space-md);
+}
+
+.skills-search input {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 14px 16px;
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+
+  background-color: var(--surface);
+  color: var(--text-primary);
+
+  font-size: 0.95rem;
+
+  outline: none;
+  box-sizing: border-box;
+}
+
+.skills-search input::placeholder {
+  color: var(--text-secondary);
+}
+
+.skills-search input:focus {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
+}
+
+.skill-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.filter {
+  padding: 9px 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background-color: var(--surface);
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  font-size: 0.9rem;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.filter:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+.skill-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-lg);
+
+  max-width: 800px;
+}
+.skill-card {
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+
+  padding: var(--space-lg);
+
+  min-height: 210px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #c4b5fd;
+
+  box-shadow: 0 8px 24px rgba(31, 27, 45, 0.08);
+}
+.skill-card-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: var(--space-md);
+}
+
+.skill-card h2 {
+  font-size: 1.1rem;
+
+  margin-bottom: 4px;
+}
+
+.skill-card-header span {
+  color: var(--text-secondary);
+
+  font-size: 0.8rem;
+}
+
+.skill-card-header strong {
+  color: var(--primary);
+
+  font-size: 1.1rem;
+}
+.skill-card > p {
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+
+  margin-bottom: var(--space-sm);
+}
+.skill-progress {
+  width: 100%;
+
+  height: 7px;
+
+  background-color: #ede9fe;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  margin-bottom: var(--space-md);
+}
+
+.skill-progress-fill {
+  height: 100%;
+
+  background-color: var(--primary);
+
+  border-radius: inherit;
+}
+.skill-card a {
+  margin-top: auto;
+
+  color: var(--primary);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.skill-card a:hover {
+  color: var(--primary-dark);
+}
+@media (max-width: 700px) {
+  .skills-content {
+    width: 92%;
+
+    padding: var(--space-xl) 0;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+
+    max-width: none;
+  }
+
+  .skills-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .skills-search input {
+    max-width: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .skill-filters {
+    gap: 8px;
+  }
+
+  .filter {
+    padding: 8px 12px;
+
+    font-size: 0.8rem;
+  }
+
+  .skill-card {
+    padding: var(--space-md);
+
+    min-height: 190px;
+  }
+}
+.add-skill-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.add-skill-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 240px;  
+  padding: 20px;
+
+  background-color: #6c4ce6;
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.plus-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.add-skill-btn:hover {
+  background-color: #5638c9;
+}
